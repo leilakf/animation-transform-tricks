@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontello-0c0b0153/css/fontello.css">
+    <title>Document</title>
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgb(14, 14, 83), rgb(126, 126, 145),rgb(15, 15, 103));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu {
+            border-radius: 5px;
+            width: 60px;
+            height: 450px;
+            /* border: 1px solid blue; */
+            transform: perspective(800px) rotateX(50deg) rotateZ(330deg);
+            transform-style: preserve-3d;
+        }
+
+        #menu>ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            /* background-color: rgb(147, 207, 16); */
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            transform-style: preserve-3d;
+
+        }
+
+        #menu>ul>li:hover {
+            transform: translateZ(30px);
+            box-shadow: 0 0 100px 14px rgb(255, 255, 255);
+        }
+
+        #menu>ul>li {
+
+            border-bottom: 1px solid grey;
+            /* background-color: crimson; */
+            transition: 1s;
+            position: relative;
+            transform-style: preserve-3d;
+
+        }
+
+        #menu>ul>li::before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 20px;
+            background-color: rgb(103, 99, 103);
+            /* border: 2px SOLID black; */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform-origin: bottom;
+            transform: rotateX(90deg);
+            transition: 1s;
+        }
+
+        #menu>ul>li::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 89px;
+            background-color: gray;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform-origin: left;
+            transform: rotateY(90deg);
+            transition: 1s
+        }
+
+        #menu>ul>li:hover::after,
+        #menu>ul>li:hover::before {
+            /* background-color: gold; */
+            box-shadow: inset 0 0 8px 4px rgb(255, 255, 255);
+        }
+
+        #menu>ul>li>a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none;
+            background-color: rgb(57, 55, 55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            color: rgb(159, 159, 159);
+            transition: 1s;
+        }
+
+        #menu>ul>li:hover>a {
+            color: rgb(255, 255, 255);
+        }
+
+        #menu>ul>li>span {
+            width: 100%;
+            height: 100%;
+            /* background-color: gray;
+            border: 1px solid rgb(0, 0, 0); */
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            transform: translateZ(-20px);
+            transition: 1s;
+        }
+         #menu>ul>li:hover>span {
+             transform: translateZ(-60px);
+                box-shadow: 0 0 90px 5px rgba(31, 29, 29, 0.514);
+                   background-color: rgba(38, 35, 35, 0.514);
+         }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li> <span></span>
+                <a href=""><i class="demo-icon icon-facebook-rect"></i></a>
+            </li>
+            <li><span></span>
+                <a href=""><i class="demo-icon  icon-music"></i></a>
+            </li>
+            <li><span></span>
+                <a href=""><i class="demo-icon icon-telegram"></i></a>
+            </li>
+            <li><span></span>
+                <a href=""><i class="demo-icon icon-twitter"></i></a>
+            </li>
+            <li><span></span>
+                <a href=""><i class="demo-icon icon-linkedin-squared"></i></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

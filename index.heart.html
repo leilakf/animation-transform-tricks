@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(78, 51, 103);
+        }
+
+        .heart {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            /* background-color: rgb(8, 20, 148); */
+            position: relative;
+            transform-style: preserve-3d;
+            animation: para1 ease infinite 20s;
+            transform-style: preserve-3d;
+           
+        }
+
+        @keyframes para1 {
+            to {
+                transform: rotateY(360deg) ;
+            }
+        }
+
+        .heart::after,
+        .heart::before,
+        .heart>div::before,
+        .heart>div::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 180px;
+            border: 1px solid rgb(0, 30, 255);
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+
+
+
+        }
+
+        .heart::after {
+            left: 0;
+
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+           
+        }
+
+
+        .heart>div {
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .heart>div:nth-of-type(1) {
+            transform: rotateY(-10deg);
+            
+        }
+
+        .heart>div:nth-of-type(2) {
+            transform: rotateY(-20deg);
+            
+        }
+
+        .heart>div:nth-of-type(3) {
+            transform: rotateY(-30deg);
+
+        }
+
+        .heart>div:nth-of-type(4) {
+            transform: rotateY(-40deg);
+        }
+
+        .heart>div:nth-of-type(5) {
+            transform: rotateY(-50deg);
+        }
+
+        .heart>div:nth-of-type(6) {
+            transform: rotateY(-60deg);
+        }
+
+        .heart>div:nth-of-type(7) {
+            transform: rotateY(-70deg);
+        }
+
+        .heart>div:nth-of-type(8) {
+            transform: rotateY(-80deg);
+        }
+
+        .heart>div:nth-of-type(9) {
+            transform: rotateY(-90deg);
+        }
+
+        .heart>div:nth-of-type(10) {
+            transform: rotateY(-100deg);
+        }
+
+        .heart>div:nth-of-type(11) {
+            transform: rotateY(-110deg);
+        }
+
+        .heart>div:nth-of-type(12) {
+            transform: rotateY(-120deg);
+        }
+         .heart>div:nth-of-type(13) {
+            transform: rotateY(-130deg);
+        }
+         .heart>div:nth-of-type(14) {
+            transform: rotateY(-140deg);
+        }
+         .heart>div:nth-of-type(15) {
+            transform: rotateY(-170deg);
+        }
+         .heart>div:nth-of-type(16) {
+            transform: rotateY(-180deg);
+        }
+         .heart>div:nth-of-type(17) {
+            transform: rotateY(-190deg);
+        }
+         .heart>div:nth-of-type(18) {
+            transform: rotateY(-200deg);
+        }
+        
+      
+
+        .heart>div::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     
+
+
+    </div>
+</body>
+
+</html>
