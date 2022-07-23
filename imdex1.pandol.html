@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, rgb(5, 5, 43), rgb(81, 81, 151), rgb(20, 20, 134));
+
+        }
+
+        .pandol {
+            width: 500px;
+            height: 450px;
+            border-radius: 50% 50% 0 0;
+            border: 1px solid white;
+            box-shadow: 0 0 19px 8px rgb(0, 0, 0);
+        }
+
+        .pandol>div {
+            width: 200px;
+            height: 140px;
+            /* background-color: rgb(255, 0, 17); */
+            border-top: 5px solid white;
+            margin: auto;
+            margin-top: 28%;
+            display: flex;
+            justify-content: space-evenly;
+            transform-style: preserve-3d;
+        }
+
+        .line {
+            width: 3px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+        }
+
+        .ball {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 253, 249);
+            border-radius: 100%;
+        }
+
+        .first {
+
+            animation: move linear infinite 3s;
+        }
+
+        .fifth {
+            animation: moveback linear infinite 3s;
+        }
+
+        @keyframes move {
+            0% {
+                transform-origin: top;
+                transform: rotate(45deg);
+            }
+
+            25% {
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform-origin: top;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform-origin: top;
+                transform: rotate(45deg);
+            }
+        }
+
+        @keyframes moveback {
+            0% {
+                transform-origin: top;
+                transform: rotate(0);
+            }
+
+            25% {
+                transform-origin: top;
+                transform: rotate(0);
+            }
+
+            50% {
+                transform-origin: top;
+                transform: rotate(-45deg);
+            }
+
+            75% {
+                transform-origin: top;
+                transform: rotate(0);
+            }
+
+            100% {
+                transform-origin: top;
+                transform: rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="pandol">
+        <div>
+            <div class="first">
+                <div class="line"></div>
+                <div class="ball"></div>
+
+            </div>
+            <div class="second">
+                <div class="line"></div>
+                <div class="ball"></div>
+            </div>
+            <div class="third">
+                <div class="line"></div>
+                <div class="ball"></div>
+            </div>
+            <div class="fourth">
+                <div class="line"></div>
+                <div class="ball"></div>
+            </div>
+            <div class="fifth">
+                <div class="line"></div>
+                <div class="ball"></div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
