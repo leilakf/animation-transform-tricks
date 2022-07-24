@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #sky {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/nody-\ \(1\).jpg);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            animation: galaxy linear infinite alternate 20s;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes galaxy {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1.11);
+            }
+        }
+
+
+        .earth {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 0 20px 6px white;
+            transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+        }
+
+        .earth::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url(img/nody-\ \(1\).png);
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: earth 120s infinite;
+
+        }
+
+        @keyframes earth {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .earth>nav:nth-of-type(1),
+        .earth>nav:nth-of-type(2),
+        .earth>nav:nth-of-type(3) {
+            width: 25%;
+            height: 25%;
+            background-color: brown;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+        }
+
+        .earth>nav:nth-of-type(1) {
+            background-image: url(img/nody-\ \(2\).jpg);
+            transform: translateZ(100px);
+            animation: rotate linear infinite 60s;
+            transform-origin: 50% 50% -100px;
+        }
+
+
+        .earth>nav:nth-of-type(2) {
+            background-image: url(img/jupiter-dan-gerhards-01.svg);
+            transform: translateZ(150px);
+            animation: rotate linear infinite 50s;
+            transform-origin: 50% 50% -150px;
+        }
+
+        .earth>nav:nth-of-type(3) {
+            width: 15%;
+            height: 15%;
+            background-image: url(img/pngaaa.com-397180.png);
+            transform: translateZ(200px);
+            animation: rotate linear infinite 50s;
+            transform-origin: 50% 50% -200px;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: translateZ(300px) rotateY(360deg) ;
+            }
+        }
+
+        .ring {
+            border-radius: 50%;
+            border: 2px solid white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(80deg);
+            box-shadow: 0 0 20px 2px white;
+
+        }
+
+        .ring1 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .ring2 {
+            width: 220px;
+            height: 220px;
+        }
+
+        .ring3 {
+            width: 270px;
+            height: 270px;
+        }
+
+        .ring4 {
+            width: 340px;
+            height: 340px;
+        }
+
+        .ring5 {
+            width: 400px;
+            height: 400px;
+        }
+
+        .ring6 {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id=sky>
+        <div class="earth">
+            <nav></nav>
+            <nav></nav>
+            <nav></nav>
+
+            <div class="ring ring1"></div>
+            <div class="ring ring2"></div>
+            <div class="ring ring3"></div>
+            <div class="ring ring4"></div>
+            <div class="ring ring5"></div>
+            <div class="ring ring6"></div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
